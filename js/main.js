@@ -1,0 +1,117 @@
+// ==========================================================
+// Header 滾動時加上不透明背景 + 模糊
+// ==========================================================
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    header.style.background = 'rgba(10, 10, 10, 0.92)';
+    header.style.backdropFilter = 'blur(8px)';
+  } else {
+    header.style.background = 'linear-gradient(to bottom, rgba(10, 10, 10, 0.6), transparent)';
+    header.style.backdropFilter = 'none';
+  }
+});
+
+// ==========================================================
+// Reveal 動畫
+// 元素加 .reveal 類別後，捲入視窗會自動 fade + 上滑
+// 用 Intersection Observer，比 scroll event 省效能
+// ==========================================================
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      // 動畫只跑一次，跑完就停止觀察這個元素
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.15,        // 元素出現 15% 時觸發
+  rootMargin: '0px 0px -80px 0px', // 提早 80px 觸發，視覺更自然
+});
+
+document.querySelectorAll('.reveal').forEach((el) => {
+  revealObserver.observe(el);
+});
+
+// ==========================================================
+// Works 篩選器
+// 點 tab 切換 active，並依 data-category 顯示／隱藏卡片
+// ==========================================================
+const filterTabs = document.querySelectorAll('.filter-tab');
+const workCards = document.querySelectorAll('.work-card');
+const worksEmpty = document.querySelector('.works-empty');
+
+function setFilter(category) {
+  let visibleCount = 0;
+
+  workCards.forEach((card) => {
+    const matches = category === 'all' || card.dataset.category === category;
+    card.classList.toggle('is-hidden', !matches);
+    if (matches) visibleCount++;
+  });
+
+  filterTabs.forEach((tab) => {
+    tab.classList.toggle('is-active', tab.dataset.filter === category);
+  });
+
+  // 沒有作品時顯示空狀態
+  if (worksEmpty) worksEmpty.hidden = visibleCount > 0;
+}
+
+filterTabs.forEach((tab) => {
+  tab.addEventListener('click', () => setFilter(tab.dataset.filter));
+});
+
+// ==========================================================
+// Lightbox 彈窗
+// 點作品卡 → 開 lightbox 顯示縮圖 + 標題 + IG 連結
+// ==========================================================
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = lightbox?.querySelector('.lightbox-image');
+const lightboxTag = lightbox?.querySelector('.lightbox-tag');
+const lightboxTitle = lightbox?.querySelector('.lightbox-title');
+const lightboxClient = lightbox?.querySelector('.lightbox-client');
+const lightboxLink = lightbox?.querySelector('.lightbox-link');
+const lightboxClose = lightbox?.querySelector('.lightbox-close');
+
+function openLightbox(card) {
+  if (!lightbox) return;
+
+  lightboxImage.src = card.dataset.thumb;
+  lightboxImage.alt = card.dataset.title;
+  lightboxTag.textContent = card.dataset.tag;
+  lightboxTitle.textContent = card.dataset.title;
+  lightboxClient.textContent = card.dataset.client;
+  lightboxLink.href = card.dataset.ig;
+
+  lightbox.classList.add('is-open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.remove('is-open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+workCards.forEach((card) => {
+  card.addEventListener('click', () => openLightbox(card));
+});
+
+lightboxClose?.addEventListener('click', closeLightbox);
+
+// 點背景（非 content）關閉
+lightbox?.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// ESC 關閉
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && lightbox?.classList.contains('is-open')) {
+    closeLightbox();
+  }
+});

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>皮爾森影音傳媒 | Person Social Media</title>
+  <meta name="description" content="Person lives for the unique. 皮爾森為了特別的你存在。專業形象影片、人物專訪、活動紀錄製作。">
+
+  <!-- 開發中：請搜尋引擎暫不收錄。正式上線時刪掉這行 -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='300' fill='%23d4b85a' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="#" class="site-logo">
+      <span class="logo-mark">P</span>
+      <span class="logo-text">皮爾森影音傳媒</span>
+    </a>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <!--
+      TODO（上線前）：把 src 換成皮爾森形象片
+      poster 是影片載入前 / 載入失敗時顯示的圖
+    -->
+    <video
+      class="hero-video"
+      autoplay muted loop playsinline
+      poster="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=70&auto=format&fit=crop">
+      <source src="https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Person Social Media · Since 2019</p>
+      <h1 class="hero-slogan">Person lives <br>for the unique.</h1>
+      <p class="hero-sub">人是為了獨特而存在</p>
+      <p class="hero-sub hero-sub--accent">皮爾森為了特別的你存在</p>
+    </div>
+
+    <a href="#about" class="hero-scroll" aria-label="Scroll to next section">
+      <span class="hero-scroll-text">Scroll</span>
+      <span class="hero-scroll-line"></span>
+    </a>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-container">
+      <div class="about-left reveal">
+        <p class="section-eyebrow"><span class="eyebrow-dash"></span>About · 01</p>
+        <h2 class="about-title">
+          為成就你的<br>
+          <span class="about-title-accent">獨特</span>而存在
+        </h2>
+        <p class="about-lead">
+          在最紛擾的時代，皮爾森透過視覺化的品牌概念，傳遞你獨有的價值。
+        </p>
+        <p class="about-body">
+          在價值創造之前，你得先被看見。<br>
+          我們相信每個品牌都有屬於自己的故事，<br>
+          等待被以最適合的方式呈現。
+        </p>
+      </div>
+
+      <div class="about-right">
+        <div class="stat reveal" style="--reveal-delay: 0.1s">
+          <span class="stat-number">2019</span>
+          <span class="stat-divider"></span>
+          <span class="stat-label">
+            <span class="stat-label-en">Since</span>
+            自高雄起步
+          </span>
+        </div>
+        <!-- TODO：客戶數待案主確認後填入 -->
+        <div class="stat reveal" style="--reveal-delay: 0.2s">
+          <span class="stat-number">—</span>
+          <span class="stat-divider"></span>
+          <span class="stat-label">
+            <span class="stat-label-en">Clients</span>
+            合作客戶
+          </span>
+        </div>
+        <!-- TODO：專案數待案主確認後填入 -->
+        <div class="stat reveal" style="--reveal-delay: 0.3s">
+          <span class="stat-number">—</span>
+          <span class="stat-divider"></span>
+          <span class="stat-label">
+            <span class="stat-label-en">Projects</span>
+            完成專案
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="services-container">
+      <header class="services-header reveal">
+        <p class="section-eyebrow"><span class="eyebrow-dash"></span>Services · 02</p>
+        <h2 class="services-title">
+          我們提供的<br>
+          <span class="services-title-accent">影像服務</span>
+        </h2>
+      </header>
+
+      <div class="services-grid">
+        <article class="service-card reveal" style="--reveal-delay: 0.05s">
+          <span class="service-num">01</span>
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="2.18"/>
+              <line x1="7" y1="2" x2="7" y2="22"/>
+              <line x1="17" y1="2" x2="17" y2="22"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <line x1="2" y1="7" x2="7" y2="7"/>
+              <line x1="2" y1="17" x2="7" y2="17"/>
+              <line x1="17" y1="17" x2="22" y2="17"/>
+              <line x1="17" y1="7" x2="22" y2="7"/>
+            </svg>
+          </div>
+          <h3 class="service-name">
+            <span class="service-name-en">Brand Image Film</span>
+            形象影片
+          </h3>
+          <p class="service-desc">把品牌精神視覺化，讓你的價值被看見。</p>
+          <a href="#works" class="service-link">
+            <span>探索作品</span>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="service-card reveal" style="--reveal-delay: 0.15s">
+          <span class="service-num">02</span>
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              <line x1="12" y1="19" x2="12" y2="23"/>
+              <line x1="8" y1="23" x2="16" y2="23"/>
+            </svg>
+          </div>
+          <h3 class="service-name">
+            <span class="service-name-en">Interview</span>
+            人物專訪
+          </h3>
+          <p class="service-desc">一次深入的對話，留下一個值得反覆觀看的故事。</p>
+          <a href="#works" class="service-link">
+            <span>探索作品</span>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="service-card reveal" style="--reveal-delay: 0.25s">
+          <span class="service-num">03</span>
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="14.31" y1="8" x2="20.05" y2="17.94"/>
+              <line x1="9.69" y1="8" x2="21.17" y2="8"/>
+              <line x1="7.38" y1="12" x2="13.12" y2="2.06"/>
+              <line x1="9.69" y1="16" x2="3.95" y2="6.06"/>
+              <line x1="14.31" y1="16" x2="2.83" y2="16"/>
+              <line x1="16.62" y1="12" x2="10.88" y2="21.94"/>
+            </svg>
+          </div>
+          <h3 class="service-name">
+            <span class="service-name-en">Event Documentation</span>
+            活動紀錄
+          </h3>
+          <p class="service-desc">把不能重來的時刻，保留成可以一直回看的影像。</p>
+          <a href="#works" class="service-link">
+            <span>探索作品</span>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="service-card reveal" style="--reveal-delay: 0.35s">
+          <span class="service-num">04</span>
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+              <line x1="12" y1="18.5" x2="12.01" y2="18.5"/>
+              <path d="M10 6h4"/>
+            </svg>
+          </div>
+          <h3 class="service-name">
+            <span class="service-name-en">Short-form Video</span>
+            短影音 · Reels
+          </h3>
+          <p class="service-desc">在社群洪流裡，做出能讓人停下來看完的 60 秒。</p>
+          <a href="#works" class="service-link">
+            <span>探索作品</span>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="works" id="works">
+    <div class="works-container">
+      <header class="works-header reveal">
+        <p class="section-eyebrow"><span class="eyebrow-dash"></span>Works · 03</p>
+        <h2 class="works-title">
+          精選<span class="works-title-accent">作品</span>
+        </h2>
+      </header>
+
+      <nav class="works-filter reveal" style="--reveal-delay: 0.1s">
+        <button type="button" class="filter-tab is-active" data-filter="all">All</button>
+        <button type="button" class="filter-tab" data-filter="image-film">形象影片</button>
+        <button type="button" class="filter-tab" data-filter="interview">人物專訪</button>
+        <button type="button" class="filter-tab" data-filter="event">活動紀錄</button>
+      </nav>
+
+      <!-- TODO（上線前）：六張縮圖換成皮爾森實際作品截圖 -->
+      <div class="works-grid">
+        <article class="work-card reveal"
+          data-category="image-film"
+          data-title="皮爾森形象片"
+          data-client="Person Social Media"
+          data-tag="形象影片"
+          data-ig="https://www.instagram.com/reel/DBOR8geS5U8/"
+          data-thumb="https://picsum.photos/seed/person-brand/1280/720">
+          <div class="work-thumb">
+            <img src="https://picsum.photos/seed/person-brand/800/450" alt="皮爾森形象片" loading="lazy">
+            <div class="work-overlay">
+              <div class="work-play">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="24" cy="24" r="22"/>
+                  <polygon points="20 16 32 24 20 32" fill="currentColor" stroke="none"/>
+                </svg>
+                <span class="work-play-text">Play</span>
+              </div>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">形象影片</span>
+            <h3 class="work-name">皮爾森形象片</h3>
+            <span class="work-client">Person Social Media</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal"
+          data-category="image-film"
+          data-title="嘉鴻遊艇 客戶專欄"
+          data-client="嘉鴻遊艇集團 Horizon"
+          data-tag="形象影片"
+          data-ig="https://www.instagram.com/reel/CuE4l8RM9yz/"
+          data-thumb="https://picsum.photos/seed/yacht/1280/720">
+          <div class="work-thumb">
+            <img src="https://picsum.photos/seed/yacht/800/450" alt="嘉鴻遊艇 客戶專欄" loading="lazy">
+            <div class="work-overlay">
+              <div class="work-play">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="24" cy="24" r="22"/>
+                  <polygon points="20 16 32 24 20 32" fill="currentColor" stroke="none"/>
+                </svg>
+                <span class="work-play-text">Play</span>
+              </div>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">形象影片</span>
+            <h3 class="work-name">嘉鴻遊艇 客戶專欄</h3>
+            <span class="work-client">嘉鴻遊艇集團 Horizon</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal"
+          data-category="image-film"
+          data-title="走出校園，與社會接軌"
+          data-client="國立臺南大學"
+          data-tag="形象影片"
+          data-ig="https://www.instagram.com/reel/DHnv8j5yTnD/"
+          data-thumb="https://picsum.photos/seed/campus/1280/720">
+          <div class="work-thumb">
+            <img src="https://picsum.photos/seed/campus/800/450" alt="台南大學形象影片" loading="lazy">
+            <div class="work-overlay">
+              <div class="work-play">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="24" cy="24" r="22"/>
+                  <polygon points="20 16 32 24 20 32" fill="currentColor" stroke="none"/>
+                </svg>
+                <span class="work-play-text">Play</span>
+              </div>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">形象影片</span>
+            <h3 class="work-name">走出校園，與社會接軌</h3>
+            <span class="work-client">國立臺南大學</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal"
+          data-category="interview"
+          data-title="在學習中，看見更成熟的自己"
+          data-client="奇美博物館 唐郁雯 ｜ 南大 EMBA"
+          data-tag="人物專訪"
+          data-ig="https://www.instagram.com/reel/DSRsYeJkk83/"
+          data-thumb="https://picsum.photos/seed/interview/1280/720">
+          <div class="work-thumb">
+            <img src="https://picsum.photos/seed/interview/800/450" alt="唐郁雯專訪" loading="lazy">
+            <div class="work-overlay">
+              <div class="work-play">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="24" cy="24" r="22"/>
+                  <polygon points="20 16 32 24 20 32" fill="currentColor" stroke="none"/>
+                </svg>
+                <span class="work-play-text">Play</span>
+              </div>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">人物專訪</span>
+            <h3 class="work-name">在學習中，看見更成熟的自己</h3>
+            <span class="work-client">奇美博物館 唐郁雯</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal"
+          data-category="event"
+          data-title="57 週年校慶文化祭"
+          data-client="中華醫事科技大學"
+          data-tag="活動紀錄"
+          data-ig="https://www.instagram.com/reel/DRYXQhCEusL/"
+          data-thumb="https://picsum.photos/seed/event/1280/720">
+          <div class="work-thumb">
+            <img src="https://picsum.photos/seed/event/800/450" alt="中華醫校慶文化祭" loading="lazy">
+            <div class="work-overlay">
+              <div class="work-play">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="24" cy="24" r="22"/>
+                  <polygon points="20 16 32 24 20 32" fill="currentColor" stroke="none"/>
+                </svg>
+                <span class="work-play-text">Play</span>
+              </div>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">活動紀錄</span>
+            <h3 class="work-name">57 週年校慶文化祭</h3>
+            <span class="work-client">中華醫事科技大學</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal"
+          data-category="event"
+          data-title="島嶼的集體記憶"
+          data-client="高雄壽山國中"
+          data-tag="活動紀錄"
+          data-ig="https://www.instagram.com/reel/DNXofxwyLqv/"
+          data-thumb="https://picsum.photos/seed/coast-school/1280/720">
+          <div class="work-thumb">
+            <img src="https://picsum.photos/seed/coast-school/800/450" alt="壽山國中島嶼的集體記憶" loading="lazy">
+            <div class="work-overlay">
+              <div class="work-play">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="24" cy="24" r="22"/>
+                  <polygon points="20 16 32 24 20 32" fill="currentColor" stroke="none"/>
+                </svg>
+                <span class="work-play-text">Play</span>
+              </div>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">活動紀錄</span>
+            <h3 class="work-name">島嶼的集體記憶</h3>
+            <span class="work-client">高雄壽山國中</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="works-empty" hidden>
+        <p>此分類即將上線，敬請期待。</p>
+      </div>
+
+      <a href="https://www.instagram.com/person.socialmedia/" target="_blank" rel="noopener" class="works-more reveal">
+        <span>View All Works on Instagram</span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="clients" id="clients">
+    <div class="clients-container">
+      <header class="clients-header reveal">
+        <p class="section-eyebrow"><span class="eyebrow-dash"></span>Clients · 04</p>
+        <h2 class="clients-title">
+          與我們合作的<span class="clients-title-accent">夥伴</span>
+        </h2>
+        <p class="clients-lead">
+          來自教育、文化、商業領域的合作客戶，每一段相遇都是一個故事的開始。
+        </p>
+      </header>
+
+      <!-- TODO（上線前）：把 .client 內的文字換成 <img src="logos/...png" alt="..."> -->
+      <div class="clients-grid reveal" style="--reveal-delay: 0.1s">
+        <div class="client"><span>國立臺南大學</span></div>
+        <div class="client"><span>南大 EMBA</span></div>
+        <div class="client"><span>中華醫事科技大學</span></div>
+        <div class="client"><span>嘉鴻遊艇</span></div>
+        <div class="client"><span>奇美博物館</span></div>
+        <div class="client"><span>高雄壽山國中</span></div>
+        <div class="client"><span>府城孔廟</span></div>
+        <div class="client"><span>廣護宮</span></div>
+        <div class="client"><span>轉個彎 大灣</span></div>
+        <div class="client"><span>拾。輕食</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <header class="contact-header reveal">
+        <p class="section-eyebrow"><span class="eyebrow-dash"></span>Contact · 05</p>
+        <h2 class="contact-title">
+          Let's create<br>
+          something <span class="contact-title-accent">unique.</span>
+        </h2>
+        <p class="contact-lead">
+          告訴我們你的故事，<br>
+          我們替你以最適合的方式說出來。
+        </p>
+      </header>
+
+      <!-- TODO（上線前）：把 hello@personmedia.tw 換成案主真實 Email -->
+      <a href="mailto:hello@personmedia.tw" class="contact-mail reveal" style="--reveal-delay: 0.1s">
+        <span class="contact-mail-label">— Get in touch</span>
+        <span class="contact-mail-addr">
+          hello@personmedia.tw
+          <span class="contact-mail-arrow" aria-hidden="true">→</span>
+        </span>
+      </a>
+
+      <div class="contact-info reveal" style="--reveal-delay: 0.2s">
+        <div class="contact-block">
+          <span class="contact-block-label">Studio</span>
+          <a class="contact-block-content"
+             href="https://www.google.com/maps/search/?api=1&query=高雄市通港路95號"
+             target="_blank" rel="noopener">
+            高雄市通港路 95 號<br>
+            Kaohsiung, Taiwan 826
+          </a>
+        </div>
+
+        <div class="contact-block">
+          <span class="contact-block-label">Follow</span>
+          <div class="contact-socials">
+            <a href="https://www.instagram.com/person.socialmedia/" target="_blank" rel="noopener">
+              <span>Instagram</span><span class="social-handle">@person.socialmedia</span>
+            </a>
+            <!-- TODO：Facebook URL 待補 -->
+            <a href="#" target="_blank" rel="noopener">
+              <span>Facebook</span><span class="social-handle">皮爾森影音傳媒</span>
+            </a>
+            <!-- TODO：YouTube URL 待補 -->
+            <a href="#" target="_blank" rel="noopener">
+              <span>YouTube</span><span class="social-handle">@personmedia</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <a href="#hero" class="footer-logo">
+        <span class="footer-logo-mark">P</span>
+        <span>Person Social Media · 皮爾森影音傳媒</span>
+      </a>
+      <p class="footer-copy">© 2026 Person Social Media. All rights reserved.</p>
+      <a href="#hero" class="footer-up" aria-label="回到頂端">
+        <span>Back to top</span>
+        <span class="footer-up-arrow" aria-hidden="true">↑</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Lightbox 彈窗 -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <button type="button" class="lightbox-close" aria-label="關閉">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+        <line x1="6" y1="6" x2="18" y2="18"/>
+        <line x1="18" y1="6" x2="6" y2="18"/>
+      </svg>
+    </button>
+    <div class="lightbox-content">
+      <div class="lightbox-media">
+        <img class="lightbox-image" src="" alt="">
+      </div>
+      <div class="lightbox-info">
+        <span class="lightbox-tag"></span>
+        <h3 class="lightbox-title"></h3>
+        <p class="lightbox-client"></p>
+        <p class="lightbox-note">影片完整版請至 Instagram 觀看</p>
+        <a class="lightbox-link" href="" target="_blank" rel="noopener">
+          <span>在 Instagram 觀看</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# macOS 自動產生的檔案
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 編輯器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系統與紀錄
+*.log
+node_modules/
+.env
+.env.local
