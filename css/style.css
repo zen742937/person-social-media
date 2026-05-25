@@ -1264,12 +1264,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  border: 1px solid var(--accent);
-  border-radius: 50%;
-  color: var(--accent);
-  font-size: 13px;
+  width: auto;
+  height: 36px;
 }
 
 .footer-copy {
