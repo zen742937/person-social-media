@@ -43,8 +43,8 @@
     <video
       class="hero-video"
       autoplay muted loop playsinline
-      poster="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=70&auto=format&fit=crop">
-      <source src="https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4" type="video/mp4">
+      poster="assets/images/person-hero-poster.jpg">
+      <source src="assets/videos/person-hero.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
 
@@ -138,7 +138,7 @@
             形象影片
           </h3>
           <p class="service-desc">把品牌精神視覺化，讓你的價值被看見。</p>
-          <a href="#works" class="service-link">
+          <a href="#works" class="service-link" data-filter="image-film">
             <span>探索作品</span>
             <span class="service-arrow" aria-hidden="true">→</span>
           </a>
@@ -159,7 +159,7 @@
             人物專訪
           </h3>
           <p class="service-desc">一次深入的對話，留下一個值得反覆觀看的故事。</p>
-          <a href="#works" class="service-link">
+          <a href="#works" class="service-link" data-filter="interview">
             <span>探索作品</span>
             <span class="service-arrow" aria-hidden="true">→</span>
           </a>
@@ -183,7 +183,7 @@
             活動紀錄
           </h3>
           <p class="service-desc">把不能重來的時刻，保留成可以一直回看的影像。</p>
-          <a href="#works" class="service-link">
+          <a href="#works" class="service-link" data-filter="event">
             <span>探索作品</span>
             <span class="service-arrow" aria-hidden="true">→</span>
           </a>
@@ -203,7 +203,7 @@
             短影音 · Reels
           </h3>
           <p class="service-desc">在社群洪流裡，做出能讓人停下來看完的 60 秒。</p>
-          <a href="#works" class="service-link">
+          <a href="#works" class="service-link" data-filter="all">
             <span>探索作品</span>
             <span class="service-arrow" aria-hidden="true">→</span>
           </a>
@@ -445,41 +445,41 @@
         </p>
       </header>
 
-      <!-- TODO（上線前）：把 hello@personmedia.tw 換成案主真實 Email -->
-      <a href="mailto:hello@personmedia.tw" class="contact-mail reveal" style="--reveal-delay: 0.1s">
+      <a href="mailto:houchihwen127@gmail.com" class="contact-mail reveal" style="--reveal-delay: 0.1s">
         <span class="contact-mail-label">— Get in touch</span>
         <span class="contact-mail-addr">
-          hello@personmedia.tw
+          houchihwen127@gmail.com
           <span class="contact-mail-arrow" aria-hidden="true">→</span>
         </span>
       </a>
 
-      <div class="contact-info reveal" style="--reveal-delay: 0.2s">
-        <div class="contact-block">
-          <span class="contact-block-label">Studio</span>
-          <a class="contact-block-content"
-             href="https://www.google.com/maps/search/?api=1&query=高雄市通港路95號"
-             target="_blank" rel="noopener">
-            高雄市通港路 95 號<br>
-            Kaohsiung, Taiwan 826
+      <div class="contact-follow reveal" style="--reveal-delay: 0.2s">
+        <span class="contact-block-label">— Follow us</span>
+        <div class="social-grid">
+          <a href="https://www.instagram.com/person.socialmedia/" target="_blank" rel="noopener" class="social-card">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+            </svg>
+            <span class="social-platform">Instagram</span>
+            <span class="social-handle">@person.socialmedia</span>
           </a>
-        </div>
-
-        <div class="contact-block">
-          <span class="contact-block-label">Follow</span>
-          <div class="contact-socials">
-            <a href="https://www.instagram.com/person.socialmedia/" target="_blank" rel="noopener">
-              <span>Instagram</span><span class="social-handle">@person.socialmedia</span>
-            </a>
-            <!-- TODO：Facebook URL 待補 -->
-            <a href="#" target="_blank" rel="noopener">
-              <span>Facebook</span><span class="social-handle">皮爾森影音傳媒</span>
-            </a>
-            <!-- TODO：YouTube URL 待補 -->
-            <a href="#" target="_blank" rel="noopener">
-              <span>YouTube</span><span class="social-handle">@personmedia</span>
-            </a>
-          </div>
+          <a href="https://www.facebook.com/personsocialmedia" target="_blank" rel="noopener" class="social-card">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+            <span class="social-platform">Facebook</span>
+            <span class="social-handle">@personsocialmedia</span>
+          </a>
+          <a href="https://www.youtube.com/@%E7%9A%AE%E7%88%BE%E6%A3%AE%E5%BD%B1%E9%9F%B3%E5%82%B3%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8" target="_blank" rel="noopener" class="social-card">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/>
+            </svg>
+            <span class="social-platform">YouTube</span>
+            <span class="social-handle">@皮爾森影音傳媒</span>
+          </a>
         </div>
       </div>
     </div>

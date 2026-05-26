@@ -64,6 +64,12 @@ filterTabs.forEach((tab) => {
   tab.addEventListener('click', () => setFilter(tab.dataset.filter));
 });
 
+document.querySelectorAll('.service-link[data-filter]').forEach((link) => {
+  link.addEventListener('click', () => {
+    setFilter(link.dataset.filter);
+  });
+});
+
 // ==========================================================
 // Lightbox 彈窗
 // 點作品卡 → 開 lightbox 顯示縮圖 + 標題 + IG 連結

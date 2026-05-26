@@ -1156,17 +1156,11 @@ body {
   transform: translateX(16px);
 }
 
-/* 兩欄資訊區（Studio + Follow） */
-.contact-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-}
-
-.contact-block {
+/* Follow us 區｜三大社群卡片 */
+.contact-follow {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 28px;
 }
 
 .contact-block-label {
@@ -1178,51 +1172,56 @@ body {
   color: var(--accent);
 }
 
-.contact-block-content {
-  font-family: var(--font-tc);
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.8;
-  color: var(--text-primary);
-  letter-spacing: 0.05em;
-  transition: color 0.3s var(--ease);
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
-.contact-block-content:hover {
-  color: var(--accent);
-}
-
-.contact-socials {
+.social-card {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-
-.contact-socials a {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border-soft);
-  font-family: var(--font-en);
-  font-size: 16px;
-  font-weight: 300;
+  gap: 20px;
+  padding: 36px 32px;
+  border: 1px solid var(--border-soft);
   color: var(--text-primary);
-  letter-spacing: 0.05em;
-  transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
+  transition: color 0.4s var(--ease),
+              border-color 0.4s var(--ease),
+              transform 0.4s var(--ease),
+              background 0.4s var(--ease);
 }
 
-.contact-socials a:hover {
+.social-card:hover {
   color: var(--accent);
-  border-bottom-color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(212, 184, 90, 0.04);
+  transform: translateY(-4px);
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--accent);
+  transition: transform 0.4s var(--ease);
+}
+
+.social-card:hover .social-icon {
+  transform: scale(1.08);
+}
+
+.social-platform {
+  font-family: var(--font-en);
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
 }
 
 .social-handle {
-  font-family: var(--font-tc);
-  font-size: 12px;
+  font-family: var(--font-en);
+  font-size: 13px;
+  font-weight: 300;
   color: var(--text-muted);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 }
 
 /* ==========================================================
@@ -1381,10 +1380,6 @@ body {
   .contact-container {
     padding: 0 var(--pad-x-tablet);
   }
-  .contact-info {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
 
   /* Footer tablet */
   .footer-container {
@@ -1541,6 +1536,9 @@ body {
   .contact-mail-addr {
     flex-wrap: wrap;
     gap: 12px;
+  }
+  .social-grid {
+    grid-template-columns: 1fr;
   }
 
   /* Footer mobile */
