@@ -75,7 +75,8 @@ document.querySelectorAll('.service-link[data-filter]').forEach((link) => {
 // 點作品卡 → 開 lightbox 顯示縮圖 + 標題 + IG 連結
 // ==========================================================
 const lightbox = document.getElementById('lightbox');
-const lightboxImage = lightbox?.querySelector('.lightbox-image');
+const lightboxMedia = lightbox?.querySelector('.lightbox-media');
+const lightboxNote  = lightbox?.querySelector('.lightbox-note');
 const lightboxTag = lightbox?.querySelector('.lightbox-tag');
 const lightboxTitle = lightbox?.querySelector('.lightbox-title');
 const lightboxClient = lightbox?.querySelector('.lightbox-client');
@@ -85,12 +86,29 @@ const lightboxClose = lightbox?.querySelector('.lightbox-close');
 function openLightbox(card) {
   if (!lightbox) return;
 
-  lightboxImage.src = card.dataset.thumb;
-  lightboxImage.alt = card.dataset.title;
+  const ytId = card.dataset.youtube;
+
+  if ( ytId ) {                   
+    lightboxMedia.innerHTML = `
+      <iframe class="lightbox-iframe"
+        src="https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0"
+        title="${card.dataset.title}"
+        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+        allowfullscreen></iframe>`;
+    lightboxNote.textContent = '';
+    lightboxLink.href = `https://www.youtube.com/watch?v=${ytId}`;
+    lightboxLink.querySelector('span').textContent = '在 YouTube 觀看';
+  } else {
+    // 一般作品：維持靜態縮圖 + IG 連結（其他 4 張不受影響）
+    lightboxMedia.innerHTML = `<img class="lightbox-image" src="${card.dataset.thumb}" alt="${card.dataset.title}">`;
+    lightboxNote.textContent = '影片完整版請至 Instagram 觀看';
+    lightboxLink.href = card.dataset.ig;
+    lightboxLink.querySelector('span').textContent = '在 Instagram 觀看';
+  }
+
   lightboxTag.textContent = card.dataset.tag;
   lightboxTitle.textContent = card.dataset.title;
   lightboxClient.textContent = card.dataset.client;
-  lightboxLink.href = card.dataset.ig;
 
   lightbox.classList.add('is-open');
   lightbox.setAttribute('aria-hidden', 'false');
@@ -102,6 +120,7 @@ function closeLightbox() {
   lightbox.classList.remove('is-open');
   lightbox.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
+  lightboxMedia.innerHTML='';
 }
 
 workCards.forEach((card) => {
